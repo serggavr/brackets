@@ -20,7 +20,7 @@ module.exports = function check(str, bracketsConfig) {
   }
   if (stack.length >= 2) {
       for (let i = 0; i < stack.length; i++) {
-    if (Object.keys(conf).find(key => conf[key] === stack[i]) === stack[stack.length - 1]) {
+    if (Object.keys(conf).find(key => conf[key] === stack[i]) === stack[i]) {
         stack.splice(0, 2);
       }
 
