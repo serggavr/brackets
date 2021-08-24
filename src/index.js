@@ -23,8 +23,8 @@ module.exports = function check(str, bracketsConfig) {
     if (Object.keys(conf).find(key => conf[key] === stack[i]) === stack[i]) {
         stack.splice(0, 2);
       }
-
     }
-  return stack.length === 0;
   }
+  return stack.length === 0;
+
 }
