@@ -6,16 +6,16 @@ module.exports = function check(str, bracketsConfig) {
   }
   for (let i = 0; i < str.length; i++) {
     if (Object.keys(conf).includes(str[i])) {
-      console.log(stack[stack.length - 1])
+      console.log(stack[stack.length - 1]);
       console.log(str[i])
       if (stack.length >= 1 && (stack[stack.length - 1] === Object.keys(conf).find(key => conf[key] === str[i]))) {
-        stack.pop()
+        stack.pop();
         } else {
           stack.push(str[i]);}
     } else {
       if (stack.length === 0) {
         return false;
-      }
+        }
       if (Object.keys(conf).find(key => conf[key] === str[i]) === stack[stack.length - 1]) {
         stack.pop();
       } else {
@@ -24,5 +24,4 @@ module.exports = function check(str, bracketsConfig) {
     }
   }
   return stack.length === 0;
-
 };
